@@ -157,7 +157,6 @@ for user in all_users:
     qtitles.append(f'ในประชุมนี้ไม่ควรพูดเรื่องอะไรบ้าง สำหรับ "[{user}]"')
 
 
-querys = [q + " โดยในประชุมนี้เป็นเกี่ยวข้องกับโปรเจ็ค การทำ AI สรุปประชุม โดยการใช้ ASR (Automatic Speech Recognition), LLM (Large Language Model), และ RAG (Retrival Augmented Generation)" for q in querys]
 all_response = []
 for i, q in enumerate(querys):
     answer = RA_MITM.answer_question(q, top_k=10, collapse_tree=True,)
